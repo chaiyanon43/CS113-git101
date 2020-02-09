@@ -1,0 +1,64 @@
+// #include<stdio.h>
+// #include<stdlib.h>
+// char name[20];
+// char number[5];
+// int main()
+// {
+    // printf("Enter name : ");
+    // // gets(name);         // รับค่าเก็บไว้ในตัวแปร name
+    // fgets(name, 20, stdin);
+    // printf("name = %s",name);
+
+    //fgets(number, 5, stdin);
+    //int i = atoi(number);
+    //double d = atoi(number);
+    //long l = atoi(number);
+    //printf("number = %s , i = %d", number, i);
+    // puts(number);
+    // putchar(110); // putcher('c')
+
+    // int found = 0;
+    // float isIn = 0.0;
+    // char isExist = '\0';
+    // fgets(number, 5, stdin);
+    // int i = atoi(number);
+    // if ( i > 0 && i < 20){
+    //     printf("if\n");
+    // }else if (i < 100 || !found && isExist){
+    //     printf("else if\n");
+    // }else if (i > 'A' && i < 'z'){
+    //     printf("else if 2\n");
+    // }else {
+    //     printf("else\n");
+    //}
+    //fgets(number, 5, stdin);
+    //int i = atoi(number);
+    
+    // int count = 0 ;
+    // while (count < i){
+    //     printf("%d\n", count);
+    //     count++;
+    // }
+    //for (int j = 0; j < i; j++){
+    //    printf("%d\n", j);
+    //}
+//}
+
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+    char hour_str[2], min_str[20];
+    int hour;
+    float min;
+    gets(hour_str);
+
+    gets(min_str);
+
+    hour = atoi(hour_str);
+    min = atoi(min_str);
+    if (hour == 1){
+        float ans = min-(min*10)/100;
+        printf("%.2f",ans);
+    }
+}
