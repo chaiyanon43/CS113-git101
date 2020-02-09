@@ -1,0 +1,48 @@
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     char tag[5];
+//     int i,j;
+//     int bit[4];
+//     i = 0;
+//     gets(tag);
+//     int a=atoi(tag);
+//     while (a>0){                    //while(เงื่อนไข){   }
+//         bit[i++]=a%2;
+//         a=a/2;
+//     }
+//     for (j=i-1;j>=0;j++)        // for (กำหนดค่าตัวแปร,เงื่อนไข,เปลี่ยนค่าตัวแปร)
+//         printf("%d",bit[j]);
+//}
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char A_A[5];
+    int a,i,j,num,m,ta;
+    gets(A_A);
+    a=atoi(A_A);
+    num=a-1;
+    i=0;
+    int y=1;
+    while (a>i){
+        j=0;
+        while (j<y){
+            printf("*");
+            j++;
+        }
+        printf("\n");
+        i++;
+        y++;
+    }
+    // m=0;
+    // ta=num;
+    // while (num>m){
+    //     j=0;
+    //     while (ta>j){
+    //         printf("*");
+    //     }
+    //     printf("\n");
+    //     m++;
+    //     ta--;
+    // }
+}
