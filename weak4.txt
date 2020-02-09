@@ -1,0 +1,25 @@
+// #include <stdio.h>
+// int addTen(int x)   //int , voide ชื่อฟังชัน(ตัวแปรที่จะทนค่าเพื่อดำเนินฟังชัน)  ตัวแปรต้องกำหนด type
+// {
+//     printf("x in addTen = %d\n",x);
+//     x=x+10;
+//     return x;
+// }
+// int addTwenty();   // เรียกใช้ฟังชัน ของ addTwenty
+// int x= 300; 
+// int main()
+// {
+//     int x = 10;
+//     int y = addTen(x);    //กำหนด y = ค่าที่returnของฟังชัน addTen
+//     printf("addTen in main = %d\n", y);
+//     printf("x in main = %d\n",x);
+//     int z = addTwenty();
+//     printf("addTwenty in main = %d\n", z);
+//     printf("x in main = %d\n", x);
+// }
+// int addTwenty()
+// {
+//     printf("x in addTwenty = %d\n", x);
+//     x=x+20;
+//     return x;
+// }
