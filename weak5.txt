@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main(){
+    int a,p,i,j;
+    i=2;
+    printf("Enter n: ");
+    scanf("%d",&a);        //scanf ไว้รับค่า เช่น ("%d",&a) = รับค่าint เก็บในที่อยู่a ต้องกำหนด type ของตัวแปรที่จะเอาไว้รับค่าก่อน
+    if (a > 0){
+        printf("-");
+        printf("\n");
+        p=1;
+        while (a>p){
+            j=0;
+            while(i>j){
+                if (j%2==0){
+                    printf("-");
+                }else{
+                    printf("x");
+                }
+                j+=1;
+            }
+            printf("\n");
+            i+=1;
+            p+=1;
+        }
+        p=2;
+        i=a-1;
+        while (a>p){
+            j=0;
+            while (i>j){
+                if (j%2==0){
+                    printf("-");
+                }else{
+                    printf("x");
+                }
+                j+=1;  
+            }
+            printf("\n");
+            i-=1;
+            p+=1;
+        }
+        if (a > 1){
+            printf("-");
+        }
+    }
+}
+scanf ไว้รับค่า คล้ายกับการใช้วิธี fgets or gets และสามารถรับหลายค่าใน บรรทัดเดียวได้ เช่น scanf("%d %s %c",&a,&b,&c)
