@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct node{
+    int data;
+    struct node *next;
+};
+void sort(struct node *head){
+    struct node *ma,*ka;
+    int sla;
+    for(ma = head;ma!=NULL;ma = ma->next){
+        for(ka = ma;ka!=NULL;ka = ka ->next){
+            if(ka->data < ma->data){
+                sla = ma->data;
+                ma->data = ka->data;
+                ka->data = sla;
+            }   
+        }
+    }
+}
+void creatlinklist(struct node **head, int num){
+    struct node *doo;
+    struct node *tmp;
+    doo = (struct  node *)malloc(sizeof(struct node));
+    doo->data = num;
+    doo->next = NULL;
+    if(*head == NULL){
+        *head = doo;
+    }else{
+        for(tmp = *head;tmp->next!=NULL;tmp = tmp->next);
+        tmp->next = doo;
+    }
+    sort(*head);   
+}   
+int main()
+{
+    struct node *head = NULL;
+    int n;
+    for(;;){
+        scanf("%d",&n);
+        if(n <= -1){
+            break;
+        }creatlinklist(&head,n);
+    }
+    struct node *tmp;
+    for(tmp = head;tmp != NULL;tmp = tmp->next){
+        printf("%d\n",tmp->data);
+    }
+}
