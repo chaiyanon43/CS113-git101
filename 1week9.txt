@@ -1,0 +1,18 @@
+-การสร้างbranch และ แยกbranch 
+โดย การสร้าง branch จะใช้คำสั่ง git branch .......(ชื่อbranch)
+และตรวจสอบว่า branch ไหนที่ถูกใช้อยู่ ณ ตอนนี้ ใช้คำสั่ง git branch
+และใช้คำสั่ง git checkout .....(ชื่อbranchที่กำหนดไว้)เพื่อเข้าถึง branch ชื่อbranchที่กำหนดไว้
+-การmerge branch 
+แบบไม่มี conflict
+เพิ่มไฟล์ ที่ต้องการจะmerge ตัวแรก add และ commit ให้เรียบร้อย
+จากนั้นใช้คำสั่ง git checkout master แล้วจะพบว่าไฟล์แรกที่ตั้งไว้จะหายไป
+หลังจากนั้น เพิ่มไฟล์ ที่ต้องการจะ merge ตัวที่สอง add และ commit เหมือนเดิม
+git merge .....(ชื่อbranch) เพื่อmerge ..... ให้ไปอยู่ในmaster
+เมื่อไม่มี conflict จะทำให้ git สร้าง commit ของการ merge นั้นไปเลย 
+ดังนั้น เราจะต้องใส่ commit message ด้วย vi ถ้าใช้ default merge commit message 
+ให้กด ESC แล้วพิมพ์ :wq! แล้วกด Enter
+เมื่อ ทำการmerge เรียบร้อย ทั้งไฟล์ที่1 และ 2 ที่ต้องการจะ merge 
+ได้อยู๋ใน branch master แล้ว
+แบบมี conflict
+เกิดจากการปรับแก้ไขข้อมูลในไฟล์เดิม บรรทัดเดิม ที่อยู่ต่าง Branch กัน
+เมื่อ merge แล้ว git ตัดสินใจไม่ได้ว่าจะใช้ข้อมูลจาก branch ใด
